@@ -1,0 +1,9 @@
+{
+    "name": "stolpovski/ducks",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ducks\\": "src/"
+        }
+    }
+}
