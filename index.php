@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use ducks\MallardDuck;
+use ducks\Simulator;
 
-$duck = new MallardDuck();
-$duck->quack();
+(new Simulator)->run();
