@@ -4,10 +4,17 @@ namespace ducks;
 
 class Simulator
 {
-    public function run()
+    private AbstractDuckFactory $duckFactory;
+
+    public function __construct(AbstractDuckFactory $duckFactory)
     {
-        $mallardDuck = new QuackCounter(new MallardDuck());
-        $rubberDuck = new QuackCounter(new RubberDuck());
+        $this->duckFactory = $duckFactory;
+    }
+
+    public function run(): void
+    {
+        $mallardDuck = $this->duckFactory->createMallardDuck();
+        $rubberDuck = $this->duckFactory->createRubberDuck();
         $gooseDuck = new GooseAdapter(new Goose());
 
         $this->simulate($mallardDuck);
