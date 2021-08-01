@@ -17,9 +17,11 @@ class Simulator
         $rubberDuck = $this->duckFactory->createRubberDuck();
         $gooseDuck = new GooseAdapter(new Goose());
 
-        $this->simulate($mallardDuck);
-        $this->simulate($rubberDuck);
-        $this->simulate($gooseDuck);
+        $flock = new Flock();
+        $flock->add($mallardDuck);
+        $flock->add($rubberDuck);
+
+        $this->simulate($flock);
 
         echo 'The ducks quacked times: ' . QuackCounter::getQuacks() . PHP_EOL;
     }
