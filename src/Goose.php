@@ -6,6 +6,6 @@ class Goose
 {
     public function honk(): void
     {
-        echo 'Honk';
+        echo 'Honk' . PHP_EOL;
     }
 }

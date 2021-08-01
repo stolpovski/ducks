@@ -6,6 +6,6 @@ class RubberDuck implements Quackable
 {
     public function quack(): void
     {
-        echo 'Squeak';
+        echo 'Squeak' . PHP_EOL;
     }
 }

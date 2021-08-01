@@ -6,6 +6,6 @@ class MallardDuck implements Quackable
 {
     public function quack(): void
     {
-        echo 'Quack';
+        echo 'Quack' . PHP_EOL;
     }
 }

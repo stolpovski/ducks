@@ -22,6 +22,7 @@ class Simulator
         $flock->add($rubberDuck);
 
         $this->simulate($flock);
+        $this->simulate($gooseDuck);
 
         echo 'The ducks quacked times: ' . QuackCounter::getQuacks() . PHP_EOL;
     }
@@ -29,6 +30,5 @@ class Simulator
     private function simulate(Quackable $duck): void
     {
         $duck->quack();
-        echo PHP_EOL;
     }
 }
