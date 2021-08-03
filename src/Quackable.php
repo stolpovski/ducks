@@ -2,7 +2,7 @@
 
 namespace ducks;
 
-interface Quackable
+interface Quackable extends QuackObservable
 {
     public function quack(): void;
 }

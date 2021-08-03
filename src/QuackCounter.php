@@ -12,6 +12,16 @@ class QuackCounter implements Quackable
         $this->duck = $duck;
     }
 
+    public function registerObserver(Observer $observer): void
+    {
+        $this->duck->registerObserver($observer);
+    }
+
+    public function notifyObservers(): void
+    {
+        $this->duck->notifyObservers();
+    }
+
     public function quack(): void
     {
         $this->duck->quack();
